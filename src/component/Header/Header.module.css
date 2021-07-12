@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    background-color: tomato;
+}
+
+.header p {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 150px;
+}

@@ -1,0 +1,9 @@
+.content {
+    background-color: brown;
+    width: 100vh;
+}
+.dialog {
+    border: 2px solid white;
+    margin: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,15 @@
+.post {
+border: 1px solid black;
+border-radius: 5px;
+margin: 5px;
+}
+
+.likes {
+    cursor: pointer;
+    color: blue;
+    background-color: black;
+}
+
+.likes span {
+    color: red;
+}
