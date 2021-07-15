@@ -1,4 +1,3 @@
-import likeReducer from "./likeCount-reducer";
 import newPostReducer from "./newPost-reducer";
 import updateNewPostsReducer from "./post-reducer";
 import userDataReducer from "./userData-reducer";
@@ -49,7 +48,6 @@ let store = {
         this._state.newPostText = updateNewPostsReducer(this._state.newPostText, action);
         this._state = newPostReducer(this._state, action);
         this._state = userDataReducer(this._state, action);
-        this._state.posts = likeReducer(this._state.posts,action);
     this.Rerender();
 
     }

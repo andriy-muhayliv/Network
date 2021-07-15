@@ -1,23 +1,20 @@
 import React from 'react';
 import Post from './post/Post';
-import store from '../Redux/store';
-import { actionTypeAddPost } from '../Redux/newPost-reducer';
-import { actionTypeUpdatePost } from '../Redux/post-reducer';
+import store from '../Redux/redux-store';
+import { actionTypeAddPost,actionTypeUpdatePost } from '../Redux/newPost-reducer';
 
 
 const Content = (props) => {
 
-    let newPost = React.createRef();
 
     let addNewPost = () => {
-        let text = store.getNewPostText();
         store.dispatch(actionTypeAddPost());
     }
 
-    let posts = store.getState().posts.map((el, item) => (<Post message={el.message} likes={el.likes} id={item} />))
+    let posts = store.getState().posts.posts.map((el, item) => (<Post message={el.message} likes={el.likes} id={item} />))
 
-    let onChangePost = () => {
-        let text = newPost.current.value;
+    let onChangePost = (e) => {
+        let text = e.target.value;
         store.dispatch(actionTypeUpdatePost(text))
     }
 
@@ -26,7 +23,7 @@ const Content = (props) => {
             <h2>Input text</h2>
 
             <div>
-                <textarea onChange={onChangePost} ref={newPost} value={store.getNewPostText()} />
+                <textarea onChange={onChangePost} value={store.getState().posts.newPostText} />
 
                 <div>
                     <button onClick={addNewPost}>Add</button>

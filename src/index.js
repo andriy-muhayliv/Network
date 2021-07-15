@@ -17,4 +17,4 @@ Rerender();
 
 store.subscribe(Rerender);
 
-console.log(store.getState().usersData); 
+console.log(store.getState()); 
