@@ -18,7 +18,6 @@ const newPostReducer = (state = initState, action) => {
             return state;
         case LIKE_COUNT:
             state.posts[action.id].likes++
-            console.log(state)
             return state;
         case UPDATE_POST:
             state.newPostText = action.newText;
