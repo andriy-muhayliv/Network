@@ -6,7 +6,7 @@ import Content from './component/Content';
 import Message from './component/Message/Message';
 import Home from './component/Home/Home'
 import {Route} from 'react-router-dom';
-import About from './component/About/About'
+import About from './component/About/About';
 
 
 
