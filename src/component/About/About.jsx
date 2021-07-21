@@ -1,9 +1,12 @@
 import React from 'react';
+import s from './About.module.css'
 
 const About = () => {
+    
+
     return(
-        <div>
-            About
+        <div className={s.wrapper}>
+            <p  className={s.text}>This app don`t do something useful.</p>
         </div>
     )
 }

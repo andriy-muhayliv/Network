@@ -9,8 +9,6 @@ import {Route} from 'react-router-dom';
 import About from './component/About/About';
 
 
-
-
 class App extends React.Component {
 
 
@@ -21,12 +19,16 @@ class App extends React.Component {
       <div>
 
         <Header />
-        <div className='content--center' >
-          <Navbar />
-          <Route path='/home' render={() => < Home />} />
+
+        <div className='nav__content'>
+          
+        <div className='nav_center'><Navbar  /></div>
+       <div className='content'>
+       <Route path='/home' render={() => < Home />} />
           <Route path='/message' render={() => <Message  />} />
           <Route path='/content' component={Content} />
           <Route path='/about' render={About} />
+       </div>
         </div>
 
       </div>

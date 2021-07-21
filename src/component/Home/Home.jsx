@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Home.module.css';
 import store from '../../Redux/redux-store';
 import { actionTypePlus } from '../../Redux/clickReducer';
-import { actionTypeDate } from '../../Redux/dataReducer';
 
 const stars = (number = 1) => {
     for (let i=0; i <= number; i++) {
